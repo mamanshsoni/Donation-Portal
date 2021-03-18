@@ -32,8 +32,10 @@ if(isset($_POST['submit'])){
 	else{
 		$register="insert into userdata(email,password) values ('$email', '$pass')";
 		mysqli_query($link,$register);
-		echo "Registeration Succesfull";
-		}
+		echo ("<script LANGUAGE='JavaScript'>
+        	alert('Good job!.... registraion successful....please login');
+		window.location.href='index.php';
+      		 </script>");
 }
 
 ?>

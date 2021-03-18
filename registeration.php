@@ -27,7 +27,11 @@ if(isset($_POST['submit'])){
 	$num= mysqli_num_rows($result);
 
 	if($num==1){
-		echo "Email Aready Taken";
+		echo ("<script LANGUAGE='JavaScript'>
+       		 alert('Email Id already taken.. please use another');
+		 window.location.href='index.php';
+      		</script>");
+
 	}
 	else{
 		$register="insert into userdata(email,password) values ('$email', '$pass')";
